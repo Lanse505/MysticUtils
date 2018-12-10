@@ -24,7 +24,7 @@ public abstract class CompatModuleBase {
         for (Map.Entry<String, Class<? extends CompatModuleBase>> e : moduleClasses.entrySet()) {
             if (Loader.isModLoaded(e.getKey()) || e.getKey().equals("minecraft")) {
                 try {
-                    Boolean enabled = MysticUtilsConfig.Modules.compat.get(e.getKey());
+                    Boolean enabled = MysticUtilsConfig.Configs.modules.compat.get(e.getKey());
                     if (enabled == null || !enabled) {
                         continue;
                     }
